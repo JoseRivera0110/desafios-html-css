@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Grid landing page</title>
+
+</head>
+<body>
+
+
+  <!-- Nav -->
+  <header class="header">
+    <nav class="nav">
+        <span class="logo__text">Bridge Collective</span>
+        <input type="checkbox" name="menu" id="menu" class="check__menu">
+        <label for="menu" class="btn__menu">
+          <img src="/assets/images/icon-menu.svg" alt="menu" class="icon__menu">
+          <img src="/assets/images/icon-close.svg" alt="menu_close" class="icon__menu--close">
+        </label>
+        <label for="menu" class="menu__overlay"></label>
+        <!-- Menu panel — hidden until the hamburger is activated -->
+        <div class="container__menu">
+          <ul class="list__menu">
+            <li class="menu__link"><a href="#" class="link">About</a></li>
+            <li class="menu__link"><a href="#" class="link">Our Work</a></li>
+            <li class="menu__link"><a href="#" class="link">Partners</a></li>
+            <li class="menu__link"><a href="#" class="link">Annual Report</a></li>
+            <li class="menu__link"><a href="#" class="link">Donate</a></li>
+          </ul>
+        </div>
+    </nav>
+  </header>  
+
+
+  <!-- Hero -->
+    <div class="cards">
+      <div class="card__hero">
+        <h1 class="hero__title">A classroom <br class="desktop__line-break"> for every child.</h1>
+        <p class="hero__text">We fund the schools, train the teachers, and <br class="desktop__line-break"> measure what works — so every child we reach <br class="desktop__line-break"> today becomes a graduate tomorrow.</p>
+      </div>
+      <!-- Stats -->
+      <div class="cards__stats">
+        <div class="card__stat stat__students">
+          <div class="card__stat--top">
+            <img src="assets/images/icon-sparkle.svg" alt="logo" class="stat__logo">
+            <p class="card__digit students_digit">2.4M</p>
+          </div>
+          <div class="card__stat--bottom">
+            <h2 class="card__title students_title">Students reached</h2>
+            <p class="card__text students_text">Across 31 countries since 2011.</p>
+          </div>
+        </div>
+        <div class="card__stat stat__school">
+          <div class="card__stat--top">
+            <img src="assets/images/icon-plus.svg" alt="logo" class="stat__logo">
+            <p class="card__digit school_digit">1,284</p>
+          </div>
+          <div class="card__stat--bottom">
+            <h2 class="card__title school_title">Schools partnered</h2>
+            <p class="card__text school_text">In 14 countries, from Kenya to Guatemala.</p> 
+          </div>
+        </div>
+        <div class="card__stat stat__teachers">
+          <div class="card__stat--top">
+            <img src="assets/images/icon-arrow-right.svg" alt="logo" class="stat__logo">
+            <p class="card__digit teachers_digit">38K</p>
+          </div>
+          <div class="card__stat--bottom">
+            <h2 class="card__title teachers_title">Teachers trained</h2>
+            <p class="card__text teachers_text">Equipped with modern tools and methodology.</p> 
+          </div>
+        </div>
+        <div class="card__stat stat__graduation">
+          <div class="card__stat--top">
+            <img src="assets/images/icon-trending-up.svg" alt="logo" class="stat__logo">
+            <p class="card__digit students_digit">3.1×</p>
+          </div>
+          <div class="card__stat--bottom">
+            <h2 class="card__title students_title">Graduation lift</h2>
+            <p class="card__text school_text">Partner schools outperform national averages 3x.</p> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer__copy">© 2026 Bridge Collective</p>
+    <p class="footer__registered">Registered charity 12345678</p>
+  </footer>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Jose Rivera</a>.
+  </div>
+</body>
+</html>
