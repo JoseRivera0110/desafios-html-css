@@ -26,27 +26,82 @@
 
       --Font_Young-serif: "Young Serif", serif;
     }
-    body{
-      background-color: var(--Color_Stone-100);
 
+    body{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--Color_Stone-100);
       font-family: "Outfit", sans-serif;
       font-optical-sizing: auto;
       font-weight: 400;
       font-style: normal;
+      height: 300dvh;
+      min-height: max-content;
     }
     .card{
-      max-width: 50rem;
       background-color: var(--Color_White);
+      border-radius: 20px;
+      max-width: 40rem;
+      padding: 40px;
+      line-height: 1.5;
+
     }
     .card__img-omelette{
-      width: max-content;
+      border-radius: 10px;
+      width: 100%;
     }
     .outfit_700{
+      color: var(--Color_Stone-900);
       font-weight: 700;
     }
 
+    .list{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-left: 25px;
+      margin-bottom: 0;
+    }
+    .card__title, .recipe-info__title{
+      font-family: var(--Font_Young-serif);
+      font-weight: 400;
+      font-style: normal;    
+    }
+    .card__title{
+      font-size: 2.4rem;
+    }
+    .card__preparation{
+      background-color: var(--Color_Rose-50);
+      padding: 30px;
+    }
+    .recipe-info__title{
+      color: var(--Color_Brown-800);
+      font-size: 1.8rem;
+    }
+    .preparation__title{
+      color: var(--Color_Rose-800);
+      margin: 0;
+      /* font-weight: 600; */
+    }
+    .preparation__item::marker{
+      color: var(--Color_Rose-800);
+    }
+    .recipe-info__item::marker{
+      color: var(--Color_Brown-800);
+      font-weight: 700;
+    }
+    .preparation__item, .recipe-info__item{
+      padding-left: 15px;
+    }
+
+
     .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution a { color: var(--Color_Brown-800); }
   </style>
 </head>
 <body>
@@ -57,7 +112,7 @@
     <p class="card__text">An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
     <div class="card__preparation">
       <h3 class="preparation__title">Preparation time</h3>
-      <ul class="preparation__list">
+      <ul class="preparation__list list">
         <li class="preparation__item"><span class="outfit_700">Total:</span> Approximately 10 minutes</li>
         <li class="preparation__item"><span class="outfit_700">Preparation:</span> 5 minutes</li>
         <li class="preparation__item"><span class="outfit_700">Cooking:</span> 5 minutes</li>
@@ -66,7 +121,7 @@
     <section class="section__recipe-info">
       <article class="recipe-info__ingredients">
         <h2 class="recipe-info__title">Ingredients</h2>
-        <ul class="recipe-info__list">
+        <ul class="recipe-info__list list">
           <li class="recipe-info__item">2-3 large eggs</li>
           <li class="recipe-info__item">Salt, to taste</li>
           <li class="recipe-info__item">Pepper, to taste</li>
@@ -76,7 +131,7 @@
       </article>
       <article class="recipe-info__instructions">
         <h2 class="recipe-info__title">Instructions</h2>
-        <ol class="recipe-info__list">
+        <ol class="recipe-info__list list">
           <li class="recipe-info__item"><span class="outfit_700">Beat the eggs:</span> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.</li>
           <li class="recipe-info__item"><span class="outfit_700">Heat the pan:</span> Place a non-stick frying pan over medium heat and add butter or oil.</li>
           <li class="recipe-info__item"><span class="outfit_700">Cook the omelette:</span> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface.</li>
@@ -89,7 +144,7 @@
         <h2 class="recipe-info__title">Nutrition</h2>
         <p class="recipe-info__text">The table below shows nutritional values per serving without the additional fillings.</p>
         <div class="recipe-info__table">
-
+          
         </div>
         Calories
         277kcal
