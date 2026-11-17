@@ -26,11 +26,12 @@
 
       --Font_Young-serif: "Young Serif", serif;
     }
-
-    body{
+    *{
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+    body{
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -40,13 +41,17 @@
       font-optical-sizing: auto;
       font-weight: 400;
       font-style: normal;
-      height: 300dvh;
+      color: var(--Color_Stone-900);
+      height: 340dvh;
       min-height: max-content;
     }
     .card{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
       background-color: var(--Color_White);
       border-radius: 20px;
-      max-width: 40rem;
+      max-width: 45rem;
       padding: 40px;
       line-height: 1.5;
 
@@ -56,10 +61,12 @@
       width: 100%;
     }
     .outfit_700{
-      color: var(--Color_Stone-900);
+      color: var(--Color_Stone-600);
       font-weight: 700;
     }
-
+    .color_brown{
+      color: var(--Color_Brown-800);
+    }
     .list{
       display: flex;
       flex-direction: column;
@@ -76,8 +83,12 @@
       font-size: 2.4rem;
     }
     .card__preparation{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
       background-color: var(--Color_Rose-50);
       padding: 30px;
+      border-radius: 10px;
     }
     .recipe-info__title{
       color: var(--Color_Brown-800);
@@ -99,9 +110,36 @@
       padding-left: 15px;
     }
 
+    .recipe-info{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 40px 0;
+    }
+    .recipe-info__ingredients{
+      padding-top: 0;
+    }
+    .recipe-info__instructions{
+      border-top: 1px solid var(--Color_Stone-150);
+      border-bottom: 1px solid var(--Color_Stone-150);
+    }
+    .recipe-info__nutrition{
+      padding-bottom: 0;
+    }
+
+    .table__nutrition{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      padding: 10px 30px;
+    }
+    .table__nutrition:not(:last-child){
+      border-bottom: 1px solid var(--Color_Stone-150);
+    }
 
     .attribution { font-size: 0.6875rem; text-align: center; }
     .attribution a { color: var(--Color_Brown-800); }
+
   </style>
 </head>
 <body>
@@ -119,7 +157,7 @@
       </ul>
     </div>
     <section class="section__recipe-info">
-      <article class="recipe-info__ingredients">
+      <article class="recipe-info recipe-info__ingredients">
         <h2 class="recipe-info__title">Ingredients</h2>
         <ul class="recipe-info__list list">
           <li class="recipe-info__item">2-3 large eggs</li>
@@ -129,7 +167,7 @@
           <li class="recipe-info__item">Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
         </ul>
       </article>
-      <article class="recipe-info__instructions">
+      <article class="recipe-info recipe-info__instructions">
         <h2 class="recipe-info__title">Instructions</h2>
         <ol class="recipe-info__list list">
           <li class="recipe-info__item"><span class="outfit_700">Beat the eggs:</span> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.</li>
@@ -140,24 +178,27 @@
           <li class="recipe-info__item"><span class="outfit_700">Enjoy:</span> Serve hot, with additional salt and pepper if needed.</li>
         </ol>
       </article>
-      <article class="recipe-info__nutrition">
+      <article class="recipe-info recipe-info__nutrition">
         <h2 class="recipe-info__title">Nutrition</h2>
         <p class="recipe-info__text">The table below shows nutritional values per serving without the additional fillings.</p>
-        <div class="recipe-info__table">
-          
+        <div class="table__nutritions">
+          <div class="table__nutrition table__nutrition-calories">
+            <p>Calories</p>
+            <span class="color_brown outfit_700">277kcal</span>
+          </div>
+          <div class="table__nutrition table__nutrition-carbs">
+            <p>Carbs</p>
+            <span class="color_brown outfit_700">0g</span>
+          </div>
+          <div class="table__nutrition table__nutrition-protein">
+            <p>Protein</p>
+            <span class="color_brown outfit_700">20g</span>
+          </div>
+          <div class="table__nutrition table__nutrition-fat">
+            <p>Fat</p>
+            <span class="color_brown outfit_700">22g</span>
+          </div>
         </div>
-        Calories
-        277kcal
-
-        Carbs
-        0g
-
-        Protein
-        20g
-
-        Fat
-        22g
-        
       </article>
     </section>
   </div>
